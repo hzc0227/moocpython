@@ -7,8 +7,9 @@
 
 from pymongo import MongoClient
 import xlwt
+from config import MongoConfig
 
-mongo_client = MongoClient('local.vipmro.org', 50015)
+mongo_client = MongoClient(MongoConfig.URL, MongoConfig.PORT)
 my_db = mongo_client['omron']
 my_col = my_db['faq_202302']
 
